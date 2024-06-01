@@ -15,8 +15,6 @@ This project is an HR Management System built using the following technologies:
 - **Employee Management**: Add, edit, and delete employee records.
 - **Attendance Tracking**: Monitor employee attendance.
 - **Leave Management**: Apply for and manage employee leave requests.
-- **Payroll Management**: Calculate and manage employee salaries.
-- **Performance Tracking**: Track and analyze employee performance using interactive charts.
 
 ## Installation
 
@@ -30,8 +28,8 @@ To get started with the project, follow these steps:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/hr-management-system.git
-cd hr-management-system
+git clone https://github.com/Tushardev0172/HRMS.git
+cd HRMS
 ```
 
 ### Install Dependencies
@@ -51,8 +49,10 @@ npm install
 Create a `.env` file in the root of the `backend` directory and add your MongoDB connection string and any other necessary environment variables.
 
 ```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+MONGODB_URL=mongodb+srv://hrmstest:hrms123@hrms.oygldwb.mongodb.net/hrms?retryWrites=true&w=majority&appName=HRMS
+SECRET_KEY=thisismysectretforthehrms
+DOMAIN=http://localhost:3000
+PORT=3210
 ```
 
 ### Run the Application
@@ -67,13 +67,14 @@ cd ../frontend
 npm run dev
 ```
 
-The backend server will run on `http://localhost:5000` and the frontend on `http://localhost:3000`.
+The backend server will run on `http://localhost:3210` and the frontend on `http://localhost:3000`.
 
 ## Usage
 
 1. Open your browser and navigate to `http://localhost:3000`.
 2. Register or log in with your credentials.
-3. Start managing your HR tasks with the available features.
+3. Demo credentials for admin [username: admin@gmail.com, password: Admin@01]
+4. Start managing your HR tasks with the available features.
 
 ## Project Structure
 
@@ -81,7 +82,10 @@ The backend server will run on `http://localhost:5000` and the frontend on `http
 hr-management-system/
 │
 ├── backend/
-│   ├── controllers/
+│   ├── controllerAPI/
+│   ├── dbConnection/
+│   ├── helper/
+│   ├── middleware/
 │   ├── models/
 │   ├── routes/
 │   ├── index.js
@@ -90,10 +94,12 @@ hr-management-system/
 │
 ├── frontend/
 │   ├── components/
-│   ├── pages/
-│   ├── styles/
 │   ├── public/
+│   ├── src/app/
+│   ├── styles/
 │   ├── tailwind.config.js
+│   ├── jsonconfig.json
+│   ├── postcss.config.js
 │   └── next.config.js
 │
 ├── README.md
