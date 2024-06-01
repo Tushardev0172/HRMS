@@ -49,7 +49,7 @@ npm install
 Create a `.env` file in the root of the `backend` directory and add your MongoDB connection string and any other necessary environment variables.
 
 ```env
-MONGODB_URL=mongodb+srv://hrmstest:hrms123@hrms.oygldwb.mongodb.net/hrms?retryWrites=true&w=majority&appName=HRMS
+MONGODB_URL=your_mongodb_connection_string
 SECRET_KEY=thisismysectretforthehrms
 DOMAIN=http://localhost:3000
 PORT=3210
