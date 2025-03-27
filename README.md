@@ -119,6 +119,9 @@ hr-management-system/
 
 - **Node.js**: A JavaScript runtime for building scalable network applications.
 - **Express.js**: A web application framework for Node.js.
+
+### Database
+
 - **MongoDB**: A NoSQL database for storing and managing data.
 
 ## Contributing
